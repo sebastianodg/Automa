@@ -14,12 +14,12 @@ namespace Automa
 		/// <summary>
 		/// Restituisce o imposta lo stato attuale
 		/// </summary>
-		public AutomaState ActualState { get; set; }
+		public AutomaState? ActualState { get; set; }
 
 		/// <summary>
 		/// Restituisce o imposta l'evento segnalato
 		/// </summary>
-		public AutomaEvent EventSignaled { get; set; }
+		public AutomaEvent? EventSignaled { get; set; }
 
 		/// <summary>
 		/// Costruttore di default
@@ -35,7 +35,7 @@ namespace Automa
 		/// </summary>
 		/// <param name="actualState">Stato attuale</param>
 		/// <param name="eventSignaled">Evento segnalato</param>
-		public AutomaEventReceivedEventArgs(AutomaState actualState, AutomaEvent eventSignaled)
+		public AutomaEventReceivedEventArgs(AutomaState? actualState, AutomaEvent? eventSignaled)
 		{
 			this.ActualState = actualState;
 			this.EventSignaled = eventSignaled;

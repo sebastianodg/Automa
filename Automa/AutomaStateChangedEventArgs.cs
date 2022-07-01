@@ -14,12 +14,12 @@ namespace Automa
 		/// <summary>
 		/// Restituisce o imposta lo stato precedente
 		/// </summary>
-		public AutomaState PreviousState { get; set; }
+		public AutomaState? PreviousState { get; set; }
 
 		/// <summary>
 		/// Restituisce o imposta lo stato attuale
 		/// </summary>
-		public AutomaState ActualState { get; set; }
+		public AutomaState? ActualState { get; set; }
 
 		/// <summary>
 		/// Costruttore di default
@@ -35,7 +35,7 @@ namespace Automa
 		/// </summary>
 		/// <param name="previousState">Stato precedente</param>
 		/// <param name="actualState">Stato attuale</param>
-		public AutomaStateChangedEventArgs(AutomaState previousState, AutomaState actualState)
+		public AutomaStateChangedEventArgs(AutomaState? previousState, AutomaState? actualState)
 		{
 			this.PreviousState = previousState;
 			this.ActualState = actualState;

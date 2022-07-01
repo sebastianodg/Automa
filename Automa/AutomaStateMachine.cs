@@ -15,27 +15,27 @@ namespace Automa
 		/// <summary>
 		/// Restituisce o imposta lo stato iniziale della macchina a stati
 		/// </summary>
-		public AutomaState InitialState { get; protected set; }
+		public AutomaState? InitialState { get; protected set; }
 
 		/// <summary>
 		/// Restituisce o imposta lo stato precedente
 		/// </summary>
-		public AutomaState PreviousState { get; protected set; }
+		public AutomaState? PreviousState { get; protected set; }
 
 		/// <summary>
 		/// Restituisce o imposta lo stato attuale
 		/// </summary>
-		public AutomaState ActualState { get; protected set; }
+		public AutomaState? ActualState { get; protected set; }
 
 		/// <summary>
 		/// Evento scatenato quando viene ricevuto un evento
 		/// </summary>
-		public event EventHandler<AutomaEventReceivedEventArgs> EventReceived;
+		public event EventHandler<AutomaEventReceivedEventArgs>? EventReceived;
 
 		/// <summary>
 		/// Evento scatenato quando lo stato è cambiato
 		/// </summary>
-		public event EventHandler<AutomaStateChangedEventArgs> StateChanged;
+		public event EventHandler<AutomaStateChangedEventArgs>? StateChanged;
 
 		/// <summary>
 		/// Costruttore di default

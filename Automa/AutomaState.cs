@@ -15,12 +15,12 @@ namespace Automa
 		/// <summary>
 		/// Riferimento alla macchina a stati
 		/// </summary>
-		protected AutomaStateMachine StateMachine { get; set; }
+		protected AutomaStateMachine? StateMachine { get; set; }
 
 		/// <summary>
 		/// Restituisce o imposta il riferimento allo stato da impostare automaticamente dopo aver impostato lo stato corrente
 		/// </summary>
-		public AutomaState AutoSwitchState { get; set; }
+		public AutomaState? AutoSwitchState { get; set; }
 
 		/// <summary>
 		/// Costruttore di default privato
@@ -32,7 +32,7 @@ namespace Automa
 		/// Costruttore con inizializzazione delle proprietà
 		/// </summary>
 		/// <param name="stateMachine">Riferimento alla macchina a stati</param>
-		public AutomaState(AutomaStateMachine stateMachine)
+		public AutomaState(AutomaStateMachine? stateMachine)
 		{
 			if (AutomaSettings.ErrorsTraceEnabled)
 				Trace.Assert(stateMachine != null, "State machine reference cannot be null!");
@@ -45,7 +45,7 @@ namespace Automa
 		/// </summary>
 		/// <param name="newEvent">Evento appena verificato che richiede di essere segnalato</param>
 		/// <returns>Prossimo stato. Deve essere restituito un riferimento a se stesso (this) se lo stato non deve cambiare</returns>
-		public abstract AutomaState Signal(AutomaEvent newEvent);
+		public abstract AutomaState Signal(AutomaEvent? newEvent);
 
 		/// <summary>
 		/// Override del metodo ToString
